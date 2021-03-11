@@ -23,51 +23,21 @@ const displayBooks = () => {
   }
 };
 
-const newBook = document.querySelector('#new-book')
-const newBookButton = newBook.querySelector('button')
+const newBook = document.querySelector('#new-book');
+const newBookButton = newBook.querySelector('button');
+const newBookForm = document.querySelector('#new-book-form');
+newBookForm.style.display = 'none';
 
-const generateForm = () => {
-  const form = document.createElement('FORM');
-
-  // title
-  const labelForTitle = document.createElement('LABEL');
-  labelForTitle.setAttribute('for', 'title');
-
-  const titleNode = document.createTextNode('Title: ');
-
-  const textForTitle = document.createElement('INPUT');
-  textForTitle.setAttribute('type', 'text');
-  textForTitle.setAttribute('id', 'title');
-  textForTitle.setAttribute('name', 'title');
-
-  // author
-  const labelForAuthor = document.createElement('LABEL');
-  labelForAuthor.setAttribute('for', 'author');
-
-  const authorNode = document.createTextNode('Author: ');
-
-  const textForAuthor = document.createElement('INPUT');
-  textForAuthor.setAttribute('type', 'text');
-  textForAuthor.setAttribute('id', 'author');
-  textForAuthor.setAttribute('name', 'author');
-  // pages
-
-  // read?
-
-
-
-  labelForTitle.appendChild(titleNode);
-  form.appendChild(labelForTitle);
-  form.appendChild(textForTitle);
-
-  labelForAuthor.appendChild(authorNode);
-  form.appendChild(labelForAuthor);
-  form.appendChild(textForAuthor);
-
-  newBook.appendChild(form);
+const showForm = () => {
+  if (newBookForm.style.display === 'none') {
+    newBookForm.style.display = 'block';
+  }
+  else {
+    newBookForm.style.display = 'none';
+  }
 };
 
 newBookButton.addEventListener('click', e => {
   console.log(e);
-  generateForm();
+  showForm();
 });

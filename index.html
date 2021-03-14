@@ -12,12 +12,9 @@
     <button>NEW BOOK</button>
 
     <form id='new-book-form'>
-      <label for='title'>Title:</label>
-      <input type='text' id='title' name='title'><br>
-      <label for='author'>Author:</label>
-      <input type='text' id='author' name='author'><br>
-      <label for='pages'>Pages:</label>
-      <input type='number' id='pages' name='pages'><br>
+      <input type='text' id='title' name='title' placeholder='title'><br>
+      <input type='text' id='author' name='author' placeholder='author'><br>
+      <input type='number' id='pages' name='pages' placeholder='pages'><br>
 
       Read?:
       <input type='radio' id='true' name='read' value='true'>
@@ -25,8 +22,12 @@
       <input type='radio' id='false' name='read' value='false'>
       <label for='false'>No</label><br>
 
-      <input type='submit'>
+      <input type='submit' id='new-book-submit-btn'>
     </form>
+  </div>
+
+  <div id='display-books'>
+    <button>DISPLAY BOOKS</button>
   </div>
 
   <script src='app.js'></script>
